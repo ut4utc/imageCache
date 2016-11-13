@@ -1,5 +1,9 @@
 # imageCache
 
+Caching Images With JavaScript and HTML5 progress Bars
+
+
+
 This JavaScript library is intended to make image caching as simple as possible.  The syntax is:
 
 var s=["images/1.jpg", "images/2.jpg", "images/3.jpg"]; // or any array of image URLs
