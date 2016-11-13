@@ -2,6 +2,14 @@
 
 Caching Images With JavaScript and HTML5 progress Bars
 
+This JavaScript library is intended to make image caching as simple as possible.  The syntax is:
+
+var s=["images/1.jpg", "images/2.jpg", "images/3.jpg"]; // or any array of image URLs
+imageCache.pushArray(s, loadImageEvent, loadAllEvent);
+
+loadImageEvent is a callback that fires everytime an image is loaded.
+loadAllEvents is a callback that fires when all images are loaded.
+
 In my last article, Cross Browser HTML5 Progress Bars In Depth, I discussed how to create progress bars and how to do fancy-pants CSS styling on them in all browsers. Sure, it’s cool eye candy, but where would you use one? I’m sure you have seen Flash sites that have a progress bars before (or what some of my designer friends call a “loader”), but just in case, take a look at the Star Trek Movie site to see an example of one in the wild. This loader tells the user how long it will take for the page to load and display. If this page takes a long time to load, a loader will prevent users from thinking the page is not loading properly and go someplace else. In most cases, these loaders show the percentage of assets have been loaded, and when it reaches 100%, the content is displayed. This prevents images from appearing half loaded when the content is first shown. While I wouldn’t want loaders for most HTML-based web sites, there are definitely times you would to want to do this, like when creating a full-screen slideshow. This article will show you how to make one easily.
 
 
@@ -102,13 +110,5 @@ Note that progress bar’s value is increased every time an image is loaded, and w
 Can We Show Other Things Loading in the Progress Bar Besides Images?
 
 It is possible to show CSS and JavaScript in the progress bar using yepnope.js. It is a little bit more involved, but very doable (I have done it before), and I leave it as an exercise to the reader to do it. Post it below, and I’ll give you full geek-cred. If no one does it, I will probably take some time and publish an example in a few weeks, but I thought it would be neat to offer up a little challenge. :-)
-
-This JavaScript library is intended to make image caching as simple as possible.  The syntax is:
-
-var s=["images/1.jpg", "images/2.jpg", "images/3.jpg"]; // or any array of image URLs
-imageCache.pushArray(s, loadImageEvent, loadAllEvent);
-
-loadImageEvent is a callback that fires everytime an image is loaded.
-loadAllEvents is a callback that fires when all images are loaded.
 
 More info can be found at http://www.useragentman.com/blog/?p=4329
